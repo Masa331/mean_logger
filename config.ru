@@ -26,7 +26,7 @@ class MeanLogger
     entry = "#{header}\n#{msg}"
 
     File.open('./log.txt', 'wb') do |f|
-      f.write current_content.prepend(entry + "\n\n\n")
+      f.write current_content.append(entry + "\n\n\n")
     end
   end
 end
